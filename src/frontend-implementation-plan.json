@@ -1,0 +1,392 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Saudi Business Launchpad marketing website + lead capture (frontend)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create responsive marketing site with top-level navigation and routes for 8 pages (English-only).",
+      "acceptanceCriteria": [
+        "A persistent header navigation links to all 8 pages and works on mobile (hamburger menu) and desktop.",
+        "Each page renders distinct content sections aligned to the requested structure.",
+        "The site is mobile-first and responsive across common breakpoints."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the root app router and layout wiring for the 8 required routes/pages (Home, Services, How It Works, Pricing, Resources, Mentorship & Networking, About Us, Contact/Get Started), ensuring all user-facing text is English."
+        },
+        {
+          "path": "frontend/src/components/site/SiteHeader.tsx",
+          "operation": "create",
+          "description": "Create a persistent responsive header with desktop nav + mobile hamburger menu. Use shadcn-ui primitives (e.g., Button, Sheet/Drawer, Navigation/Popover as available) to implement the menu; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/site/SiteFooter.tsx",
+          "operation": "create",
+          "description": "Create a persistent footer region with consistent branding and quick links to all top-level pages."
+        },
+        {
+          "path": "frontend/src/components/site/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Create a shared layout wrapper composing SiteHeader + main content container + SiteFooter for consistent spacing and responsive behavior."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create the Home page view scaffold and section layout (hero, trust indicators, highlights) wired into the router."
+        },
+        {
+          "path": "frontend/src/pages/ServicesPage.tsx",
+          "operation": "create",
+          "description": "Create the Services page view scaffold and section layout wired into the router."
+        },
+        {
+          "path": "frontend/src/pages/HowItWorksPage.tsx",
+          "operation": "create",
+          "description": "Create the How It Works page view scaffold and section layout wired into the router."
+        },
+        {
+          "path": "frontend/src/pages/PricingPage.tsx",
+          "operation": "create",
+          "description": "Create the Pricing page view scaffold and section layout wired into the router."
+        },
+        {
+          "path": "frontend/src/pages/ResourcesPage.tsx",
+          "operation": "create",
+          "description": "Create the Resources page view scaffold and section layout wired into the router."
+        },
+        {
+          "path": "frontend/src/pages/MentorshipNetworkingPage.tsx",
+          "operation": "create",
+          "description": "Create the Mentorship & Networking page view scaffold and section layout wired into the router."
+        },
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "create",
+          "description": "Create the About Us page view scaffold and section layout wired into the router."
+        },
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "create",
+          "description": "Create the Contact / Get Started page view scaffold and wire it into the router (form implementation handled under REQ-9)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement Home page hero, CTAs, and trust indicators with exact required text.",
+      "acceptanceCriteria": [
+        "Home page shows the exact requested headline text.",
+        "Home hero includes the exact durable hero sentence: “All-in-one platform for starting and managing businesses in Saudi Arabia — legally, confidently, and faster.”",
+        "Both CTAs are visible above the fold on mobile and desktop and navigate to appropriate pages/sections (e.g., Contact/Get Started and Services or a registration flow teaser).",
+        "Trust indicators are displayed in a dedicated section (e.g., icon list or badges) and clearly communicate Saudi-focused, compliant, and expert-backed."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Implement the Home hero section with the exact headline and durable hero sentence, add two above-the-fold CTAs (“Get Started”, “Register Your Business”) linking to Contact/Get Started and a relevant page/section (e.g., Services), and add a dedicated trust indicators section (Saudi-focused, compliant, expert-backed). Use shadcn-ui components (e.g., Button, Card, Badge) for CTA and trust UI; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/site/routes.ts",
+          "operation": "create",
+          "description": "Centralize route paths/labels for header navigation and CTA linking (e.g., CONTACT and SERVICES) to ensure CTAs navigate consistently across pages."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build Services page with five scannable service categories and CTAs to Contact/Get Started.",
+      "acceptanceCriteria": [
+        "Services page displays exactly the five requested service categories with concise descriptions.",
+        "Each service is visually scannable (card/grid or section layout) and responsive.",
+        "Each service includes a “Get Started”/“Talk to an Expert” style link that routes to Contact/Get Started."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ServicesPage.tsx",
+          "operation": "modify",
+          "description": "Implement five responsive service cards/sections for: Business Registration Guidance, Regulatory Compliance Support, Operational Setup Assistance, VAT & ZATCA Compliance, Licensing & Documentation Support; each includes a CTA linking to Contact/Get Started. Use shadcn-ui Card/Button components for a consistent scannable layout; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/site/ServiceCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable ServiceCard component (title, description, icon, CTA) to keep Services and related trust/service highlights consistent. Use shadcn-ui Card/Button; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Build How It Works page with a 3-step flow in a mobile-readable timeline/numbered layout.",
+      "acceptanceCriteria": [
+        "How It Works page displays the three steps in order with clear headings matching the requested text.",
+        "The steps are presented as a timeline/numbered steps layout that remains readable on mobile."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HowItWorksPage.tsx",
+          "operation": "modify",
+          "description": "Implement the three steps in order with headings exactly: Step 1 “Choose Business Type”, Step 2 “Get Guided Registration”, Step 3 “Stay Compliant & Scale”, using a responsive numbered/timeline layout."
+        },
+        {
+          "path": "frontend/src/components/site/StepsTimeline.tsx",
+          "operation": "create",
+          "description": "Create a reusable StepsTimeline component to render numbered steps responsively (stacked on mobile, horizontal/connected on larger screens). Use shadcn-ui Card/Separator as appropriate; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Build Pricing page with Free/Pro/Enterprise plans, Pro monthly vs yearly, and pay-per-service section with CTAs.",
+      "acceptanceCriteria": [
+        "Pricing page shows three primary plan cards (Free, Pro, Enterprise) and a separate pay-per-service section.",
+        "Pro plan clearly presents both monthly and yearly options (toggle or side-by-side).",
+        "Each plan has a CTA leading to Contact/Get Started."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/PricingPage.tsx",
+          "operation": "modify",
+          "description": "Implement pricing UI with three plan cards (Free, Pro with monthly+yearly, Enterprise) and a separate pay-per-service section. Include CTAs on each plan to Contact/Get Started. Use shadcn-ui Card/Button and Tabs/ToggleGroup (or a simple segmented control) to present Pro monthly vs yearly; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/site/PricingPlanCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable plan card component for consistent plan presentation (title, price, features, CTA). Use shadcn-ui Card/Button; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Build Resources page with four categories and multiple static downloadable-looking items per category.",
+      "acceptanceCriteria": [
+        "Resources page contains the four requested categories with multiple example items per category (static placeholders are acceptable).",
+        "Resource items are displayed in a consistent card/list UI and are responsive."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ResourcesPage.tsx",
+          "operation": "modify",
+          "description": "Implement Resources sections for Business templates, Compliance checklists, Startup guides, Knowledge base, each with multiple static placeholder items displayed as consistent responsive cards/links (downloadable-looking). Use shadcn-ui Card/Button/Link styling; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/site/ResourceList.tsx",
+          "operation": "create",
+          "description": "Create a reusable ResourceList component for consistent rendering of resource items within each category. Use shadcn-ui Card and optional icons; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Build Mentorship & Networking page with three sections and CTAs to Contact/Get Started.",
+      "acceptanceCriteria": [
+        "Mentorship & Networking page includes the three requested sections with clear headings and concise copy.",
+        "Each section includes a CTA leading to Contact/Get Started."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/MentorshipNetworkingPage.tsx",
+          "operation": "modify",
+          "description": "Implement three sections: access to Saudi business mentors, a startup community, and a partner ecosystem; each section includes a CTA linking to Contact/Get Started. Use shadcn-ui Card/Button for scannable sections; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Build About Us page including mission text, Vision 2030 alignment, and local expertise/partnership emphasis.",
+      "acceptanceCriteria": [
+        "About page includes the mission statement text “Empower Saudi entrepreneurs”.",
+        "About page mentions alignment with Saudi Vision 2030.",
+        "About page includes content about local expertise and partnerships."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "modify",
+          "description": "Implement About Us page content including the exact mission statement “Empower Saudi entrepreneurs”, mention Saudi Vision 2030 alignment, and highlight local expertise & partnerships."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Build Contact / Get Started form with client-side validation, success/error states, and configurable WhatsApp/Email links; submit lead to backend.",
+      "acceptanceCriteria": [
+        "Contact page renders a form with required full name + email fields and optional fields as specified.",
+        "Form validates required fields client-side and shows success/error states.",
+        "WhatsApp and Email contact methods are shown as clickable links (WhatsApp link should be configurable; do not hardcode a real number unless provided)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "modify",
+          "description": "Implement the Contact / Get Started form fields (required: full name, email; optional: phone, business stage/type, message), client-side validation, and success/error UI states. Wire form submit to call the backend capability submitLead via the existing actor hook. Use shadcn-ui Form-related primitives (Input, Textarea, Button, Alert) as available; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/hooks/useSubmitLead.ts",
+          "operation": "create",
+          "description": "Create a React hook (React Query mutation) that calls the backend capability submitLead and exposes loading/success/error state for the Contact page."
+        },
+        {
+          "path": "frontend/src/config/marketing.ts",
+          "operation": "create",
+          "description": "Add configurable marketing contact settings (e.g., WhatsApp URL and contact email) sourced from environment variables, and provide safe fallbacks that do not hardcode a real WhatsApp number."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Add per-page SEO titles/meta descriptions and a footer with branding, quick links, and legal-disclaimer trust signal.",
+      "acceptanceCriteria": [
+        "Each page sets an appropriate title and meta description including relevant keywords where natural.",
+        "Site includes a footer with company name and quick links.",
+        "A disclaimer is visible in footer or relevant pages stating the platform provides guidance and is not a substitute for professional legal advice."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/site/Seo.tsx",
+          "operation": "create",
+          "description": "Create a lightweight Seo component that sets document title and meta description on render/navigation, allowing each page to supply keywords naturally (e.g., Saudi business registration, start a business in Saudi Arabia, Saudi compliance platform, business setup KSA, Saudi startup support)."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Wire Seo component with Home-specific title/meta description containing relevant keywords naturally."
+        },
+        {
+          "path": "frontend/src/pages/ServicesPage.tsx",
+          "operation": "modify",
+          "description": "Wire Seo component with Services-specific title/meta description containing relevant keywords naturally."
+        },
+        {
+          "path": "frontend/src/pages/HowItWorksPage.tsx",
+          "operation": "modify",
+          "description": "Wire Seo component with How It Works-specific title/meta description containing relevant keywords naturally."
+        },
+        {
+          "path": "frontend/src/pages/PricingPage.tsx",
+          "operation": "modify",
+          "description": "Wire Seo component with Pricing-specific title/meta description containing relevant keywords naturally."
+        },
+        {
+          "path": "frontend/src/pages/ResourcesPage.tsx",
+          "operation": "modify",
+          "description": "Wire Seo component with Resources-specific title/meta description containing relevant keywords naturally."
+        },
+        {
+          "path": "frontend/src/pages/MentorshipNetworkingPage.tsx",
+          "operation": "modify",
+          "description": "Wire Seo component with Mentorship & Networking-specific title/meta description containing relevant keywords naturally."
+        },
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "modify",
+          "description": "Wire Seo component with About-specific title/meta description containing relevant keywords naturally."
+        },
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "modify",
+          "description": "Wire Seo component with Contact/Get Started-specific title/meta description containing relevant keywords naturally."
+        },
+        {
+          "path": "frontend/src/components/site/SiteFooter.tsx",
+          "operation": "modify",
+          "description": "Add consistent footer branding (Saudi Business Launchpad), quick links to all pages, and a visible disclaimer stating content provides guidance and is not a substitute for professional legal advice."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Ensure base HTML contains language and baseline meta tags appropriate for SEO; keep per-page title/meta handled by the Seo component."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Apply consistent modern Saudi-friendly design system (green/white + subtle gold accents), typography, spacing, and trust-focused visuals.",
+      "acceptanceCriteria": [
+        "Primary UI uses a green/white palette with restrained gold accents and high contrast for accessibility.",
+        "Typography and spacing are consistent across all pages.",
+        "Key sections use trust-focused visual motifs (icons/illustrations) without cluttering the layout."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create/define global Tailwind base styles and CSS variables to express the Saudi-friendly palette (green/white with subtle gold accents), typography, and consistent spacing defaults."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Adjust Tailwind theme tokens (via existing CSS variable-driven color system) to align primary/accent usage with the requested green/white and subtle gold accents while preserving accessibility contrast."
+        },
+        {
+          "path": "frontend/src/components/site/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Apply consistent layout container widths, section spacing, and typographic hierarchy across pages for a professional/modern look."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Integrate required generated static hero illustration and icon set as public assets and use them in Home hero and trust/service UI.",
+      "acceptanceCriteria": [
+        "All generated images are stored under frontend/public/assets/generated and referenced directly by the frontend (not via backend).",
+        "Home page hero uses the generated hero visual.",
+        "Service/trust sections use the generated icons consistently."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/sbl-hero.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the generated hero illustration asset at frontend/public/assets/generated/sbl-hero.dim_1600x900.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/sbl-icon-registration.dim_128x128.png",
+          "operation": "create",
+          "description": "Add the generated icon asset at frontend/public/assets/generated/sbl-icon-registration.dim_128x128.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/sbl-icon-compliance.dim_128x128.png",
+          "operation": "create",
+          "description": "Add the generated icon asset at frontend/public/assets/generated/sbl-icon-compliance.dim_128x128.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/sbl-icon-growth.dim_128x128.png",
+          "operation": "create",
+          "description": "Add the generated icon asset at frontend/public/assets/generated/sbl-icon-growth.dim_128x128.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/sbl-icon-mentorship.dim_128x128.png",
+          "operation": "create",
+          "description": "Add the generated icon asset at frontend/public/assets/generated/sbl-icon-mentorship.dim_128x128.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/sbl-icon-network.dim_128x128.png",
+          "operation": "create",
+          "description": "Add the generated icon asset at frontend/public/assets/generated/sbl-icon-network.dim_128x128.png."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Reference and render the generated hero image from frontend/public/assets/generated/sbl-hero.dim_1600x900.png within the Home hero section."
+        },
+        {
+          "path": "frontend/src/pages/ServicesPage.tsx",
+          "operation": "modify",
+          "description": "Use generated icons (e.g., frontend/public/assets/generated/sbl-icon-registration.dim_128x128.png and frontend/public/assets/generated/sbl-icon-compliance.dim_128x128.png) within service cards for trust-focused visuals."
+        },
+        {
+          "path": "frontend/src/pages/MentorshipNetworkingPage.tsx",
+          "operation": "modify",
+          "description": "Use generated icons (e.g., frontend/public/assets/generated/sbl-icon-mentorship.dim_128x128.png and frontend/public/assets/generated/sbl-icon-network.dim_128x128.png) consistently within mentorship/networking sections."
+        },
+        {
+          "path": "frontend/src/components/site/ServiceCard.tsx",
+          "operation": "modify",
+          "description": "Support optional icon rendering in ServiceCard so generated icons can be applied consistently across services/trust sections."
+        }
+      ]
+    }
+  ]
+}

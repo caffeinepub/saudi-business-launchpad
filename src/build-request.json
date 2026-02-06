@@ -1,0 +1,274 @@
+{
+  "kind": "build_request",
+  "title": "Saudi Business Launchpad marketing website + lead capture form",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive marketing website for “Saudi Business Launchpad” with top-level navigation and routes/pages for: Home, Services, How It Works, Pricing, Resources, Mentorship & Networking, About Us, and Contact / Get Started. All user-facing text must be in English.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Key Pages to Include\n1. Home Page\n...\n8. Contact / Get Started\nSimple signup form\nWhatsApp / Email contact"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A persistent header navigation links to all 8 pages and works on mobile (hamburger menu) and desktop.",
+        "Each page renders distinct content sections aligned to the requested structure.",
+        "The site is mobile-first and responsive across common breakpoints."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the Home page content with: headline “Start & Manage Your Business Legally in Saudi Arabia”, a short value proposition (including the provided durable hero text), primary CTAs “Get Started” and “Register Your Business”, and trust indicators emphasizing Saudi-focused, compliant, expert-backed positioning.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Home Page\nClear headline: “Start & Manage Your Business Legally in Saudi Arabia”\nShort value proposition\nCall-to-action buttons: “Get Started”, “Register Your Business”\nTrust indicators (Saudi-focused, compliant, expert-backed)",
+          "After generation, edit hero text manually to include:\n“All-in-one platform for starting and managing businesses in Saudi Arabia — legally, confidently, and faster.”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home page shows the exact requested headline text.",
+        "Home hero includes the exact durable hero sentence: “All-in-one platform for starting and managing businesses in Saudi Arabia — legally, confidently, and faster.”",
+        "Both CTAs are visible above the fold on mobile and desktop and navigate to appropriate pages/sections (e.g., Contact/Get Started and Services or a registration flow teaser).",
+        "Trust indicators are displayed in a dedicated section (e.g., icon list or badges) and clearly communicate Saudi-focused, compliant, and expert-backed."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build the Services page with clear sections/cards for: Business Registration Guidance, Regulatory Compliance Support, Operational Setup Assistance, VAT & ZATCA Compliance, and Licensing & Documentation Support.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "2. Services\nBusiness Registration Guidance\nRegulatory Compliance Support\nOperational Setup Assistance\nVAT & ZATCA Compliance\nLicensing & Documentation Support"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Services page displays exactly the five requested service categories with concise descriptions.",
+        "Each service is visually scannable (card/grid or section layout) and responsive.",
+        "Each service includes a “Get Started”/“Talk to an Expert” style link that routes to Contact/Get Started."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Build the How It Works page showing a step-by-step flow: Step 1 “Choose Business Type”, Step 2 “Get Guided Registration”, Step 3 “Stay Compliant & Scale”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "3. How It Works\nStep 1: Choose Business Type\nStep 2: Get Guided Registration\nStep 3: Stay Compliant & Scale"
+        ]
+      },
+      "acceptanceCriteria": [
+        "How It Works page displays the three steps in order with clear headings matching the requested text.",
+        "The steps are presented as a timeline/numbered steps layout that remains readable on mobile."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Build the Pricing page with plan cards for: Free Plan (basic guidance), Pro Subscription (monthly and yearly options), Enterprise Plan, plus a Pay-per-service option section.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "4. Pricing\nFree Plan (basic guidance)\nPro Subscription (monthly/yearly)\nEnterprise Plan\nPay-per-service options"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Pricing page shows three primary plan cards (Free, Pro, Enterprise) and a separate pay-per-service section.",
+        "Pro plan clearly presents both monthly and yearly options (toggle or side-by-side).",
+        "Each plan has a CTA leading to Contact/Get Started."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Build the Resources page with sections for: Business templates, Compliance checklists, Startup guides, and Knowledge base. Content can be presented as downloadable-looking cards/links (static for now).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "5. Resources\nBusiness templates\nCompliance checklists\nStartup guides\nKnowledge base"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Resources page contains the four requested categories with multiple example items per category (static placeholders are acceptable).",
+        "Resource items are displayed in a consistent card/list UI and are responsive."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Build the Mentorship & Networking page with sections describing: access to Saudi business mentors, a startup community, and a partner ecosystem.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "6. Mentorship & Networking\nAccess to Saudi business mentors\nStartup community\nPartner ecosystem"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Mentorship & Networking page includes the three requested sections with clear headings and concise copy.",
+        "Each section includes a CTA leading to Contact/Get Started."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Build the About Us page including mission (“Empower Saudi entrepreneurs”), Vision 2030 alignment, and an emphasis on local expertise & partnerships.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "7. About Us\nMission: Empower Saudi entrepreneurs\nVision aligned with Vision 2030\nLocal expertise & partnerships"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About page includes the mission statement text “Empower Saudi entrepreneurs”.",
+        "About page mentions alignment with Saudi Vision 2030.",
+        "About page includes content about local expertise and partnerships."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Build the Contact / Get Started page with a simple signup form that collects at minimum: full name, email, phone (optional), business stage/type (optional), and a message. Include WhatsApp and Email contact options (as links).",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "8. Contact / Get Started\nSimple signup form\nWhatsApp / Email contact"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact page renders a form with required full name + email fields and optional fields as specified.",
+        "Form validates required fields client-side and shows success/error states.",
+        "WhatsApp and Email contact methods are shown as clickable links (WhatsApp link should be configurable; do not hardcode a real number unless provided)."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Implement backend lead capture: store Contact/Get Started submissions in the Motoko canister with timestamp, and expose query methods to list submissions (admin/dev use).",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Contact / Get Started\nSimple signup form"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A backend update method accepts a contact submission payload and persists it to stable storage.",
+        "A backend query method returns stored submissions (most recent first or clearly documented order).",
+        "Basic input constraints are enforced server-side (e.g., non-empty name and valid-looking email string)."
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Add basic SEO and trust signals across the site: set per-page document titles/meta descriptions using the provided SEO keywords, and include a footer with consistent branding plus a lightweight disclaimer that content is guidance and not legal advice.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "SEO Keywords\nSaudi business registration, start a business in Saudi Arabia, Saudi compliance platform, business setup KSA, Saudi startup support",
+          "Tone & Style\nProfessional\nTrustworthy\nClear & simple"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each page sets an appropriate title and meta description including relevant keywords where natural.",
+        "Site includes a footer with company name and quick links.",
+        "A disclaimer is visible in footer or relevant pages stating the platform provides guidance and is not a substitute for professional legal advice."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Apply a consistent visual design system matching the requested preferences: professional/modern, Saudi-friendly palette (green/white with subtle gold accents), clean typography, and trust-focused visuals (business/compliance/growth).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Design Preferences\nProfessional & modern\nSaudi-friendly color palette (green, white, subtle gold accents)\nClean typography\nMobile-first design\nTrust-focused visuals (business, compliance, growth)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Primary UI uses a green/white palette with restrained gold accents and high contrast for accessibility.",
+        "Typography and spacing are consistent across all pages.",
+        "Key sections use trust-focused visual motifs (icons/illustrations) without cluttering the layout."
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Generate and integrate required static visual assets (hero illustration + small icon set) into the frontend as static files under frontend/public/assets/generated, and use them in the UI (Home hero and trust/service cards).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Trust-focused visuals (business, compliance, growth)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All generated images are stored under frontend/public/assets/generated and referenced directly by the frontend (not via backend).",
+        "Home page hero uses the generated hero visual.",
+        "Service/trust sections use the generated icons consistently."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for all user-facing website text.",
+    "Do not edit files under frontend/src/components/ui or other immutable paths specified by the platform; compose them instead.",
+    "Backend must remain a single Motoko actor (no additional backend services).",
+    "Do not implement third-party authentication providers; Internet Identity only if authentication becomes necessary (not required for this build)."
+  ],
+  "nonGoals": [
+    "Implementing payment processing or subscription billing flows.",
+    "Providing real legal advice or guaranteeing compliance outcomes.",
+    "Building real-time chat, push notifications, or email/SMS delivery integrations.",
+    "Integrations with external government systems (e.g., actual business registration APIs)."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Modern Saudi-business themed hero illustration with abstract city/office elements in green/white with subtle gold accents (sbl-hero.dim_1600x900.png)",
+      "Minimal outline icon: document/registration (sbl-icon-registration.dim_128x128.png)",
+      "Minimal outline icon: shield/compliance (sbl-icon-compliance.dim_128x128.png)",
+      "Minimal outline icon: growth/graph (sbl-icon-growth.dim_128x128.png)",
+      "Minimal outline icon: mentorship/people (sbl-icon-mentorship.dim_128x128.png)",
+      "Minimal outline icon: network/partners (sbl-icon-network.dim_128x128.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

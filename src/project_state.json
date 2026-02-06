@@ -1,0 +1,185 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build “Saudi Business Launchpad,” a SaaS platform and marketing website for Saudi entrepreneurs to start and manage businesses legally in KSA, providing guided business registration, compliance support (incl. VAT/ZATCA), operational setup help, resources, and mentorship/networking, with a modern, trustworthy, Saudi-aligned (Vision 2030) design and clear pricing/CTAs.",
+  "architectural_notes": [
+    "Mobile-first, clean professional UI with Saudi-friendly palette (green/white/subtle gold) and trust-focused visuals",
+    "SEO-targeted content focused on Saudi business registration/compliance keywords",
+    "Tone: professional, trustworthy, clear, entrepreneur-friendly; align messaging with Saudi Vision 2030"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Modern Saudi-business themed hero illustration with abstract city/office elements in green/white with subtle gold accents (sbl-hero.dim_1600x900.png)\n- Minimal outline icon: document/registration (sbl-icon-registration.dim_128x128.png)\n- Minimal outline icon: shield/compliance (sbl-icon-compliance.dim_128x128.png)\n- Minimal outline icon: growth/graph (sbl-icon-growth.dim_128x128.png)\n- Minimal outline icon: mentorship/people (sbl-icon-mentorship.dim_128x128.png)\n- Minimal outline icon: network/partners (sbl-icon-network.dim_128x128.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-marketing-website-for-saudi-business-launchpad-with-top-level-navigation-and-routes-pages-for-home-services-how-it-works-pricing-resources-mentorship-networking-about-us-and-contact-get-started-all-user-facing-text-must-be-in-english",
+      "title": "Create a responsive marketing website for “Saudi Business Launchpad” with top-level navigation and routes/pages for: Home, Services, How It Works, Pricing, Resources, Mentorship & Networking, About Us, and Contact / Get Started. All user-facing text must be in English.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-home-page-content-with-headline-start-manage-your-business-legally-in-saudi-arabia-a-short-value-proposition-including-the-provided-durable-hero-text-primary-ctas-get-started-and-register-your-business-and-trust-indicators-emphasizing-saudi-focused-compliant-expert-backed-positioning",
+      "title": "Implement the Home page content with: headline “Start & Manage Your Business Legally in Saudi Arabia”, a short value proposition (including the provided durable hero text), primary CTAs “Get Started” and “Register Your Business”, and trust indicators emphasizing Saudi-focused, compliant, expert-backed positioning.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-services-page-with-clear-sections-cards-for-business-registration-guidance-regulatory-compliance-support-operational-setup-assistance-vat-zatca-compliance-and-licensing-documentation-support",
+      "title": "Build the Services page with clear sections/cards for: Business Registration Guidance, Regulatory Compliance Support, Operational Setup Assistance, VAT & ZATCA Compliance, and Licensing & Documentation Support.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-how-it-works-page-showing-a-step-by-step-flow-step-1-choose-business-type-step-2-get-guided-registration-step-3-stay-compliant-scale",
+      "title": "Build the How It Works page showing a step-by-step flow: Step 1 “Choose Business Type”, Step 2 “Get Guided Registration”, Step 3 “Stay Compliant & Scale”.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-pricing-page-with-plan-cards-for-free-plan-basic-guidance-pro-subscription-monthly-and-yearly-options-enterprise-plan-plus-a-pay-per-service-option-section",
+      "title": "Build the Pricing page with plan cards for: Free Plan (basic guidance), Pro Subscription (monthly and yearly options), Enterprise Plan, plus a Pay-per-service option section.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-resources-page-with-sections-for-business-templates-compliance-checklists-startup-guides-and-knowledge-base-content-can-be-presented-as-downloadable-looking-cards-links-static-for-now",
+      "title": "Build the Resources page with sections for: Business templates, Compliance checklists, Startup guides, and Knowledge base. Content can be presented as downloadable-looking cards/links (static for now).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-mentorship-networking-page-with-sections-describing-access-to-saudi-business-mentors-a-startup-community-and-a-partner-ecosystem",
+      "title": "Build the Mentorship & Networking page with sections describing: access to Saudi business mentors, a startup community, and a partner ecosystem.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-about-us-page-including-mission-empower-saudi-entrepreneurs-vision-2030-alignment-and-an-emphasis-on-local-expertise-partnerships",
+      "title": "Build the About Us page including mission (“Empower Saudi entrepreneurs”), Vision 2030 alignment, and an emphasis on local expertise & partnerships.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-contact-get-started-page-with-a-simple-signup-form-that-collects-at-minimum-full-name-email-phone-optional-business-stage-type-optional-and-a-message-include-whatsapp-and-email-contact-options-as-links",
+      "title": "Build the Contact / Get Started page with a simple signup form that collects at minimum: full name, email, phone (optional), business stage/type (optional), and a message. Include WhatsApp and Email contact options (as links).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-basic-seo-and-trust-signals-across-the-site-set-per-page-document-titles-meta-descriptions-using-the-provided-seo-keywords-and-include-a-footer-with-consistent-branding-plus-a-lightweight-disclaimer-that-content-is-guidance-and-not-legal-advice",
+      "title": "Add basic SEO and trust signals across the site: set per-page document titles/meta descriptions using the provided SEO keywords, and include a footer with consistent branding plus a lightweight disclaimer that content is guidance and not legal advice.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-consistent-visual-design-system-matching-the-requested-preferences-professional-modern-saudi-friendly-palette-green-white-with-subtle-gold-accents-clean-typography-and-trust-focused-visuals-business-compliance-growth",
+      "title": "Apply a consistent visual design system matching the requested preferences: professional/modern, Saudi-friendly palette (green/white with subtle gold accents), clean typography, and trust-focused visuals (business/compliance/growth).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-integrate-required-static-visual-assets-hero-illustration-small-icon-set-into-the-frontend-as-static-files-under-frontend-public-assets-generated-and-use-them-in-the-ui-home-hero-and-trust-service-cards",
+      "title": "Generate and integrate required static visual assets (hero illustration + small icon set) into the frontend as static files under frontend/public/assets/generated, and use them in the UI (Home hero and trust/service cards).",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create marketing website with core pages: Home, Services, How It Works, Pricing, Resources, Mentorship & Networking, About, Contact/Get Started",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Home page content: headline, value proposition, primary CTAs (Get Started/Register), and trust indicators (Saudi-focused, compliant, expert-backed)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Services page sections for Business Registration, Regulatory Compliance, Operational Setup, VAT & ZATCA compliance, Licensing/Documentation support",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "How It Works page with step-by-step flow (Choose business type → Guided registration → Stay compliant & scale)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Pricing page with Free, Pro (monthly/yearly), Enterprise, and pay-per-service options",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Resources section: templates, compliance checklists, startup guides, knowledge base",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Mentorship & Networking section: mentor access, community, partner ecosystem",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Contact/Get Started: simple signup form plus WhatsApp/Email contact options",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Platform feature: guided business registration workflows tailored to Saudi-specific legal requirements",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Platform feature: compliance support including reminders/alerts and expert support (incl. VAT/ZATCA)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Implement backend lead capture: store Contact/Get Started submissions in the Motoko canister with timestamp, and expose query methods to list submissions (admin/dev use).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Saudi Business Launchpad",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

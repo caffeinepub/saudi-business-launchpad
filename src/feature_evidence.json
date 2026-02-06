@@ -1,0 +1,265 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-responsive-marketing-website-for-saudi-business-launchpad-with-top-level-navigation-and-routes-pages-for-home-services-how-it-works-pricing-resources-mentorship-networking-about-us-and-contact-get-started-all-user-facing-text-must-be-in-english",
+      "featureTitle": "Create a responsive marketing website for “Saudi Business Launchpad” with top-level navigation and routes/pages for: Home, Services, How It Works, Pricing, Resources, Mentorship & Networking, About Us, and Contact / Get Started. All user-facing text must be in English.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/site/SiteFooter.tsx",
+        "frontend/src/components/site/SiteHeader.tsx",
+        "frontend/src/components/site/SiteLayout.tsx",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/HowItWorksPage.tsx",
+        "frontend/src/pages/MentorshipNetworkingPage.tsx",
+        "frontend/src/pages/PricingPage.tsx",
+        "frontend/src/pages/ResourcesPage.tsx",
+        "frontend/src/pages/ServicesPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-home-page-content-with-headline-start-manage-your-business-legally-in-saudi-arabia-a-short-value-proposition-including-the-provided-durable-hero-text-primary-ctas-get-started-and-register-your-business-and-trust-indicators-emphasizing-saudi-focused-compliant-expert-backed-positioning",
+      "featureTitle": "Implement the Home page content with: headline “Start & Manage Your Business Legally in Saudi Arabia”, a short value proposition (including the provided durable hero text), primary CTAs “Get Started” and “Register Your Business”, and trust indicators emphasizing Saudi-focused, compliant, expert-backed positioning.",
+      "files": [
+        "frontend/src/components/site/routes.ts",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-services-page-with-clear-sections-cards-for-business-registration-guidance-regulatory-compliance-support-operational-setup-assistance-vat-zatca-compliance-and-licensing-documentation-support",
+      "featureTitle": "Build the Services page with clear sections/cards for: Business Registration Guidance, Regulatory Compliance Support, Operational Setup Assistance, VAT & ZATCA Compliance, and Licensing & Documentation Support.",
+      "files": [
+        "frontend/src/components/site/ServiceCard.tsx",
+        "frontend/src/pages/ServicesPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-how-it-works-page-showing-a-step-by-step-flow-step-1-choose-business-type-step-2-get-guided-registration-step-3-stay-compliant-scale",
+      "featureTitle": "Build the How It Works page showing a step-by-step flow: Step 1 “Choose Business Type”, Step 2 “Get Guided Registration”, Step 3 “Stay Compliant & Scale”.",
+      "files": [
+        "frontend/src/components/site/StepsTimeline.tsx",
+        "frontend/src/pages/HowItWorksPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-pricing-page-with-plan-cards-for-free-plan-basic-guidance-pro-subscription-monthly-and-yearly-options-enterprise-plan-plus-a-pay-per-service-option-section",
+      "featureTitle": "Build the Pricing page with plan cards for: Free Plan (basic guidance), Pro Subscription (monthly and yearly options), Enterprise Plan, plus a Pay-per-service option section.",
+      "files": [
+        "frontend/src/components/site/PricingPlanCard.tsx",
+        "frontend/src/pages/PricingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-resources-page-with-sections-for-business-templates-compliance-checklists-startup-guides-and-knowledge-base-content-can-be-presented-as-downloadable-looking-cards-links-static-for-now",
+      "featureTitle": "Build the Resources page with sections for: Business templates, Compliance checklists, Startup guides, and Knowledge base. Content can be presented as downloadable-looking cards/links (static for now).",
+      "files": [
+        "frontend/src/components/site/ResourceList.tsx",
+        "frontend/src/pages/ResourcesPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-mentorship-networking-page-with-sections-describing-access-to-saudi-business-mentors-a-startup-community-and-a-partner-ecosystem",
+      "featureTitle": "Build the Mentorship & Networking page with sections describing: access to Saudi business mentors, a startup community, and a partner ecosystem.",
+      "files": [
+        "frontend/src/pages/MentorshipNetworkingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-about-us-page-including-mission-empower-saudi-entrepreneurs-vision-2030-alignment-and-an-emphasis-on-local-expertise-partnerships",
+      "featureTitle": "Build the About Us page including mission (“Empower Saudi entrepreneurs”), Vision 2030 alignment, and an emphasis on local expertise & partnerships.",
+      "files": [
+        "frontend/src/pages/AboutPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-contact-get-started-page-with-a-simple-signup-form-that-collects-at-minimum-full-name-email-phone-optional-business-stage-type-optional-and-a-message-include-whatsapp-and-email-contact-options-as-links",
+      "featureTitle": "Build the Contact / Get Started page with a simple signup form that collects at minimum: full name, email, phone (optional), business stage/type (optional), and a message. Include WhatsApp and Email contact options (as links).",
+      "files": [
+        "frontend/src/hooks/useSubmitLead.ts",
+        "frontend/src/pages/ContactPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-basic-seo-and-trust-signals-across-the-site-set-per-page-document-titles-meta-descriptions-using-the-provided-seo-keywords-and-include-a-footer-with-consistent-branding-plus-a-lightweight-disclaimer-that-content-is-guidance-and-not-legal-advice",
+      "featureTitle": "Add basic SEO and trust signals across the site: set per-page document titles/meta descriptions using the provided SEO keywords, and include a footer with consistent branding plus a lightweight disclaimer that content is guidance and not legal advice.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/components/site/Seo.tsx",
+        "frontend/src/components/site/SiteFooter.tsx",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/HowItWorksPage.tsx",
+        "frontend/src/pages/MentorshipNetworkingPage.tsx",
+        "frontend/src/pages/PricingPage.tsx",
+        "frontend/src/pages/ResourcesPage.tsx",
+        "frontend/src/pages/ServicesPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-consistent-visual-design-system-matching-the-requested-preferences-professional-modern-saudi-friendly-palette-green-white-with-subtle-gold-accents-clean-typography-and-trust-focused-visuals-business-compliance-growth",
+      "featureTitle": "Apply a consistent visual design system matching the requested preferences: professional/modern, Saudi-friendly palette (green/white with subtle gold accents), clean typography, and trust-focused visuals (business/compliance/growth).",
+      "files": [
+        "frontend/src/components/site/SiteLayout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-and-integrate-required-static-visual-assets-hero-illustration-small-icon-set-into-the-frontend-as-static-files-under-frontend-public-assets-generated-and-use-them-in-the-ui-home-hero-and-trust-service-cards",
+      "featureTitle": "Generate and integrate required static visual assets (hero illustration + small icon set) into the frontend as static files under frontend/public/assets/generated, and use them in the UI (Home hero and trust/service cards).",
+      "files": [
+        "frontend/src/components/site/ServiceCard.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/MentorshipNetworkingPage.tsx",
+        "frontend/src/pages/ServicesPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-06T20:51:14.078Z",
+  "summary": "Diff adds a full React/TanStack Router marketing-site skeleton (layout, header/footer, SEO helper, Home/About/Contact pages partially shown) plus a Motoko backend for lead submissions. Several BuildRequest requirements are either not evidenced in the diff summary (due to omitted/truncated files) or appear only partially implemented. The diff also introduces unrequested Internet Identity/auth/access-control and user-profile functionality.",
+  "missing_requirements": [
+    {
+      "id": "REQ-3",
+      "requirement": "Build the Services page with exactly five service categories and CTAs routing to Contact/Get Started.",
+      "reason": "ServicesPage implementation is not shown in the diff summary; cannot verify the five required categories or CTA routing behavior.",
+      "evidence": [
+        "frontend/src/App.tsx (routes to ServicesPage, but page content not shown)"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "requirement": "Build the How It Works page with steps: “Choose Business Type”, “Get Guided Registration”, “Stay Compliant & Scale” in a timeline/numbered layout.",
+      "reason": "HowItWorksPage implementation is not shown; cannot verify step headings/order or timeline layout usage.",
+      "evidence": [
+        "frontend/src/App.tsx (routes to HowItWorksPage)",
+        "frontend/src/components/site/StepsTimeline.tsx (timeline component exists, but page usage not shown)"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Build the Pricing page with Free/Pro/Enterprise plan cards, Pro monthly+yearly options, and a pay-per-service section; each plan has CTA to Contact/Get Started.",
+      "reason": "PricingPage implementation is not shown; cannot verify plan cards, Pro monthly/yearly presentation, or pay-per-service section.",
+      "evidence": [
+        "frontend/src/App.tsx (routes to PricingPage)",
+        "frontend/src/components/site/PricingPlanCard.tsx (component exists, but page usage/structure not shown)"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "requirement": "Build the Resources page with four categories (templates, checklists, guides, knowledge base) and multiple example items per category.",
+      "reason": "ResourcesPage implementation is not shown; cannot verify the four required categories and multiple example items.",
+      "evidence": [
+        "frontend/src/App.tsx (routes to ResourcesPage)",
+        "frontend/src/components/site/ResourceList.tsx (component exists, but page usage/content not shown)"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "requirement": "Build the Mentorship & Networking page with sections for mentors, startup community, partner ecosystem, each with CTA to Contact/Get Started.",
+      "reason": "MentorshipNetworkingPage implementation is not shown; cannot verify required sections and CTAs.",
+      "evidence": [
+        "frontend/src/App.tsx (routes to MentorshipNetworkingPage)"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "requirement": "About Us page must include mission text “Empower Saudi entrepreneurs”, mention Vision 2030 alignment, and emphasize local expertise & partnerships.",
+      "reason": "Mission text is evidenced, but the diff summary truncates the remainder of AboutPage before showing Vision 2030 and local expertise/partnerships content, so full compliance cannot be verified from provided evidence.",
+      "evidence": [
+        "frontend/src/pages/AboutPage.tsx (truncated; mission text shown, Vision 2030 section starts but is truncated)"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "requirement": "Contact/Get Started page form collects required full name + email, optional phone + business stage/type, and message; client-side validation with success/error states; WhatsApp and Email contact options as clickable links with configurable WhatsApp link.",
+      "reason": "Form fields and success state are partially evidenced, but the diff summary truncates before showing WhatsApp/email links and any explicit client-side validation beyond HTML 'required' attributes; WhatsApp configurability is not evidenced.",
+      "evidence": [
+        "frontend/src/pages/ContactPage.tsx (truncated)"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "requirement": "Backend lead capture persists submissions to stable storage with timestamp; query method lists submissions; enforce basic server-side constraints (non-empty name, valid-looking email).",
+      "reason": "Backend stores leads in an in-memory Map (`leadsStorage = Map.empty...`) with no stable variable usage shown, so persistence to stable storage is not evidenced. Also `submitLead` shows no server-side validation for non-empty name or valid-looking email (only duplicate-email check).",
+      "evidence": [
+        "backend/main.mo (leadsStorage is a non-stable Map; submitLead lacks name/email validation)"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "requirement": "Generate and integrate required static visual assets under frontend/public/assets/generated and use them in UI (Home hero + icons).",
+      "reason": "HomePage references the expected asset paths, but the diff summary does not show the actual generated image files under `frontend/public/assets/generated` (and notes omitted added files), so asset generation/storage cannot be verified from the provided evidence.",
+      "evidence": [
+        "frontend/src/pages/HomePage.tsx (references /assets/generated/*.png)",
+        "file-diff summary: \"Omitted files due to limits: added=12\""
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity authentication provider added and wired into the app (InternetIdentityProvider/useInternetIdentity/useActor).",
+      "reason": "BuildRequest explicitly says authentication is not required for this build; Internet Identity only if authentication becomes necessary. The diff introduces II regardless.",
+      "evidence": [
+        "frontend/src/main.tsx (wraps app in InternetIdentityProvider)",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Backend access control / admin system with secret-token initialization and admin-only lead queries, plus user profile storage APIs.",
+      "reason": "BuildRequest only asked for lead capture and a query method to list submissions for admin/dev use; it did not request an access-control framework, secret-token initialization, or user profile features.",
+      "evidence": [
+        "backend/main.mo (imports authorization modules; initializes accessControlState; userProfiles; getCallerUserProfile/saveCallerUserProfile; admin checks)",
+        "frontend/src/hooks/useActor.ts (calls actor._initializeAccessControlWithSecret(adminToken))"
+      ]
+    },
+    {
+      "description": "Extra backend lead query endpoints (ordered by name, filter by business stage) beyond a basic list-submissions query.",
+      "reason": "Not requested; only a query method to list submissions was required.",
+      "evidence": [
+        "backend/main.mo (getAllLeadsOrderedByName, getLeadsByBusinessStage)",
+        "frontend/src/hooks/useQueries.ts (hooks for these extra endpoints)"
+      ]
+    },
+    {
+      "description": "Footer attribution link to caffeine.ai and decorative 'Built with Heart' line.",
+      "reason": "Not part of any requirement (footer branding + disclaimer were required, but this specific attribution is unrequested).",
+      "evidence": [
+        "frontend/src/components/site/SiteFooter.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/site/PricingPlanCard.tsx",
+    "frontend/src/components/site/ResourceList.tsx",
+    "frontend/src/components/site/Seo.tsx",
+    "frontend/src/components/site/ServiceCard.tsx",
+    "frontend/src/components/site/SiteFooter.tsx",
+    "frontend/src/components/site/SiteHeader.tsx",
+    "frontend/src/components/site/SiteLayout.tsx",
+    "frontend/src/components/site/StepsTimeline.tsx",
+    "frontend/src/components/site/routes.ts",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/hooks/useSubmitLead.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AboutPage.tsx",
+    "frontend/src/pages/ContactPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/HowItWorksPage.tsx",
+    "frontend/src/pages/MentorshipNetworkingPage.tsx",
+    "frontend/src/pages/PricingPage.tsx",
+    "frontend/src/pages/ResourcesPage.tsx",
+    "frontend/src/pages/ServicesPage.tsx",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}
